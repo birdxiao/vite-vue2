@@ -6,9 +6,13 @@
 </template>
 
 <script setup>
-import { useMouse, useCounter } from '@vueuse/core';
+import { useElementSize } from '@vueuse/core';
 import { ref } from '@vue/composition-api';
 import HelloWorld from './components/HelloWorld.vue';
 
 const componentRef = ref();
+
+const {
+  width
+} = useElementSize(componentRef);
 </script>
